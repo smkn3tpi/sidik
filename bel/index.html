@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bel Otomatis</title>
+</head>
+<body style="margin: 0; padding: 0; overflow: hidden;">
+  
+  <iframe 
+    src="https://script.google.com/a/macros/guru.smk.belajar.id/s/AKfycbyHCf7EyuStvO6terc0gKSvXESu7m7kWY5fKjEl9NVO6jqpyGfF-VGgFwJuGBTGxm-saQ/exec"
+    width="100%"
+    height="100%"
+    allowfullscreen="true"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
 
+  <script>
+    window.onload = function() {
+      // Fungsi fullscreen opsional, jika mengganggu di HP bisa dihapus
+      document.querySelector('iframe')
+        .requestFullscreen()
+        .catch((err) => {
+          console.error('Error attempting to enable full-screen mode:', err.message);
+        });
+    };
+  </script>
+</body>
+</html>
