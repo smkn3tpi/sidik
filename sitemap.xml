@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://smkn3tpi.github.io/sidik/</loc></url>
-  <url><loc>https://smkn3tpi.github.io/sidik/skanega-ai/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/asesmen-asertif/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/bel/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/bingkai/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/bk-digital/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/bukutamu/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/cetakfoto/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/database/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/generator-suratbk/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/guruwali/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/input-kehadiran/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/input-keterlambatan/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/izin-piket/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/jadwal/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/jurnal-gurumapel/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/kartu-pelajar/</loc></url>
   <url><loc>https://smkn3tpi.github.io/sidik/mading-bk/</loc></url>
-  </urlset>
+  <url><loc>https://smkn3tpi.github.io/sidik/monitoring/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/mpls/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/murid/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/nilai/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/presensi-ptk/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/prestasi/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/prompt-maker/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/pustaka/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/ranking1/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/rekap-kehadiran/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/rekap-keterlambatan/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/skanega-ai/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/skl/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/walikelas/</loc></url>
+  <url><loc>https://smkn3tpi.github.io/sidik/walimurid/</loc></url>
+</urlset>
