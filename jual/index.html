@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pasar Preloved Sekolah</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body style="margin: 0; padding: 0; overflow: hidden;">
   
@@ -11,18 +12,47 @@
     width="100%"
     height="100%"
     allowfullscreen="true"
+    allow="clipboard-write"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
   </iframe>
 
   <script>
+    // Fungsi fullscreen opsional
     window.onload = function() {
-      // Fungsi fullscreen opsional, jika mengganggu di HP bisa dihapus
       document.querySelector('iframe')
         .requestFullscreen()
         .catch((err) => {
-          console.error('Error attempting to enable full-screen mode:', err.message);
+          console.error('Layar penuh gagal:', err.message);
         });
     };
+
+    // JEMBATAN KOMUNIKASI: Mendengarkan perintah 'share' dari Google Script
+    window.addEventListener("message", function(event) {
+      // Mengecek apakah pesan yang datang memiliki aksi "shareProduct"
+      if (event.data && event.data.action === "shareProduct") {
+        const teksBagikan = event.data.text;
+
+        // Mengeksekusi pembagian link sebagai situs Induk (Github Pages)
+        if (navigator.share) {
+          navigator.share({
+            title: 'Pasar Preloved SMKN 3',
+            text: teksBagikan
+          }).catch(console.error);
+        } else {
+          // Fallback jika browser tidak mendukung tombol bagikan
+          navigator.clipboard.writeText(teksBagikan).then(function() {
+            Swal.fire({ 
+              icon: 'success', 
+              title: 'Teks Berhasil Disalin!', 
+              text: 'Teks promosi beserta Link Resmi sudah disalin ke papan klip. Silakan langsung paste (tempel) di WhatsApp!', 
+              confirmButtonColor: '#0d6efd' 
+            });
+          }).catch(function(err) {
+            console.error('Gagal menyalin teks: ', err);
+          });
+        }
+      }
+    });
   </script>
 </body>
 </html>
