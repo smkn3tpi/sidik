@@ -5,51 +5,55 @@
   <title>Pasar Preloved Sekolah</title>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body style="margin: 0; padding: 0; overflow: hidden;">
+<body style="margin: 0; padding: 0; overflow: hidden; background-color: #2c3e50;">
   
   <iframe 
     src="https://script.google.com/macros/s/AKfycbxAcZ_TCFH0ahcFa5fHiURK2aA_MNSORm1Tfv4D97kcTeQhRUgNku-zsOI63VHCPDG0Jg/exec"
     width="100%"
     height="100%"
     allowfullscreen="true"
-    allow="clipboard-write"
+    allow="web-share; clipboard-write; fullscreen"
     style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
   </iframe>
 
   <script>
-    // Fungsi fullscreen opsional
+    // Fungsi memicu fullscreen otomatis saat pertama kali dimuat
     window.onload = function() {
-      document.querySelector('iframe')
-        .requestFullscreen()
-        .catch((err) => {
-          console.error('Layar penuh gagal:', err.message);
+      const iframe = document.querySelector('iframe');
+      if (iframe && iframe.requestFullscreen) {
+        iframe.requestFullscreen().catch((err) => {
+          console.warn('Masuk ke mode layar penuh otomatis ditolak oleh browser:', err.message);
         });
+      }
     };
 
-    // JEMBATAN KOMUNIKASI: Mendengarkan perintah 'share' dari Google Script
+    // Menerima kiriman data pesan 'share' dari dalam Google Script iframe
     window.addEventListener("message", function(event) {
-      // Mengecek apakah pesan yang datang memiliki aksi "shareProduct"
       if (event.data && event.data.action === "shareProduct") {
         const teksBagikan = event.data.text;
 
-        // Mengeksekusi pembagian link sebagai situs Induk (Github Pages)
+        // Eksekusi atas nama domain GitHub Pages (Induk)
         if (navigator.share) {
           navigator.share({
             title: 'Pasar Preloved SMKN 3',
             text: teksBagikan
-          }).catch(console.error);
-        } else {
-          // Fallback jika browser tidak mendukung tombol bagikan
-          navigator.clipboard.writeText(teksBagikan).then(function() {
-            Swal.fire({ 
-              icon: 'success', 
-              title: 'Teks Berhasil Disalin!', 
-              text: 'Teks promosi beserta Link Resmi sudah disalin ke papan klip. Silakan langsung paste (tempel) di WhatsApp!', 
-              confirmButtonColor: '#0d6efd' 
-            });
-          }).catch(function(err) {
-            console.error('Gagal menyalin teks: ', err);
+          }).catch((err) => {
+            console.log("Berbagi dibatalkan oleh pengguna atau error:", err);
           });
+        } else {
+          // Jika browser bawaan di HP tidak mendukung navigator.share
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(teksBagikan).then(function() {
+              Swal.fire({ 
+                icon: 'success', 
+                title: 'Teks Berhasil Disalin!', 
+                text: 'Teks promosi beserta Link Resmi sudah disalin ke papan klip. Silakan langsung paste (tempel) di WhatsApp!', 
+                confirmButtonColor: '#0d6efd' 
+              });
+            }).catch(function(err) {
+              console.error('Gagal menyalin:', err);
+            });
+          }
         }
       }
     });
