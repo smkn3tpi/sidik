@@ -6,74 +6,64 @@
   <meta name="google-site-verification" content="uRw0ZaoxYeuUt4n64DJlGLxmQWCp3gw4kQ200jg_G5A" />
   
   <meta name="description" content="SIDIK (Sistem Digitalisasi Informasi Konseling) resmi SMKN 3 Tanjungpinang. Portal layanan digital sekolah terpadu untuk siswa, guru, wali kelas, dan orang tua.">
-  
   <meta name="keywords" content="SIDIK SMKN 3, SMKN 3 Tanjungpinang, Skanega, Aplikasi Sekolah SMKN 3, Digitalisasi SMKN 3">
   
   <title>SIDIK - SMKN 3 Tanjungpinang</title>
 
   <link rel="icon" type="image/png" href="https://smkn3tpi.github.io/sidik/logo.png">
 
-  <meta property="og:url" content="https://smkn3tpi.github.io/sidik/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="SIDIK - Portal Layanan Digital SMKN 3 Tanjungpinang">
-  <meta property="og:description" content="Akses layanan konseling, Mading BK, absensi, dan administrasi digital sekolah dalam satu pintu resmi.">
-  <meta property="og:image" content="https://smkn3tpi.github.io/sidik/logo.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f4f6f9;
+    }
+    /* Desain tombol buka tab baru / darurat */
+    .btn-buka-langsung {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+    .btn-buka-langsung:hover {
+      background-color: #0056b3;
+    }
+    .iframe-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      padding-top: 60px; /* Memberi ruang untuk tombol di atas */
+      box-sizing: border-box;
+    }
+  </style>
 </head>
-<body style="margin: 0; padding: 0; overflow: hidden;">
+<body>
 
-  <div style="display:none;">
-    <h1>Portal Layanan SIDIK SMKN 3 Tanjungpinang</h1>
-    <p>Akses berbagai fasilitas digitalisasi bimbingan konseling dan administrasi sekolah:</p>
-    <ul>
-      <li><a href="https://smkn3tpi.github.io/sidik/asesmen-asertif/">Asesmen Asertif</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/bel/">Bel Sekolah</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/bingkai/">Bingkai Foto / Twibbon</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/bk-digital/">BK Digital</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/bukutamu/">Buku Tamu</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/cetakfoto/">Cetak Foto</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/database/">Database Sistem</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/generator-suratbk/">Generator Surat BK</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/guruwali/">Guru Wali</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/input-kehadiran/">Input Kehadiran</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/input-keterlambatan/">Input Keterlambatan</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/izin-piket/">Izin Piket</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/jadwal/">Jadwal Pelajaran</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/jurnal-gurumapel/">Jurnal Guru Mapel</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/kartu-pelajar/">Kartu Pelajar</a></li>
-      
-      <li><a href="https://smkn3tpi.github.io/sidik/mading-bk/">Mading BK</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/monitoring/">Monitoring Sistem</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/mpls/">MPLS Sekolah</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/murid/">Portal Murid</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/nilai/">Input / Cek Nilai</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/presensi-ptk/">Presensi PTK</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/prestasi/">Data Prestasi</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/prompt-maker/">Prompt Maker</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/pustaka/">Pustaka / Perpustakaan</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/ranking1/">Ranking 1</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/rekap-kehadiran/">Rekap Kehadiran</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/rekap-keterlambatan/">Rekap Keterlambatan</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/skanega-ai/">Skanega AI</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/skl/">Surat Keterangan Lulus (SKL)</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/walikelas/">Portal Wali Kelas</a></li>
-      <li><a href="https://smkn3tpi.github.io/sidik/walimurid/">Portal Wali Murid</a></li>
-    </ul>
-  </div>
+  <!-- Tombol ini berfungsi sebagai Bypass jika Google memblokir Iframe (sameorigin) -->
+  <a class="btn-buka-langsung" href="https://script.google.com/macros/s/AKfycbyN4N5BMEDNCOkyMRZPiaPr8C1RJoyN_FhxG3aArookCi1WiO1XCi2K7bct7wnZHkUwbw/exec" target="_blank">
+    Buka di Tab Baru (Layar Penuh) 🚀
+  </a>
   
+  <!-- Iframe Aplikasi Utama -->
   <iframe 
-    src="https://script.google.com/a/macros/guru.smk.belajar.id/s/AKfycbyN4N5BMEDNCOkyMRZPiaPr8C1RJoyN_FhxG3aArookCi1WiO1XCi2K7bct7wnZHkUwbw/exec"
-    width="100%"
-    height="100%"
-    allowfullscreen="true"
-    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+    class="iframe-container"
+    src="https://script.google.com/macros/s/AKfycbyN4N5BMEDNCOkyMRZPiaPr8C1RJoyN_FhxG3aArookCi1WiO1XCi2K7bct7wnZHkUwbw/exec"
+    allowfullscreen="true">
   </iframe>
 
-  <script>
-    window.onload = function() {
-      document.querySelector('iframe').requestFullscreen().catch((err) => {
-        console.error('Error fullscreen:', err.message);
-      });
-    };
-  </script>
 </body>
 </html>
